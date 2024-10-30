@@ -1,8 +1,3 @@
-﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
--- Link to schema: https://app.quickdatabasediagrams.com/#/d/JwdMa2
--- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
-
-
 CREATE TABLE "orders" (
     "row_id" int   NOT NULL,
     "order_id" varchar(10)   NOT NULL,
@@ -142,6 +137,7 @@ CREATE TABLE "shifts" (
      )
 );
 
+--Adding relationship between databases
 ALTER TABLE "orders" ADD CONSTRAINT "fk_orders_cust_id" FOREIGN KEY("cust_id")
 REFERENCES "customers" ("cust_id");
 
